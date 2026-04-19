@@ -13,18 +13,25 @@ function jawabanSalah() {
 // EVENT KEYBOARD
 document.addEventListener("keydown", function(event) {
 
-        if (event.code === "Space") {
+    // Cegah scroll kalau spasi ditekan
+    if (event.code === "Space") {
         event.preventDefault();
     }
-    const key = event.key.toLowerCase();
 
     // BENAR
-    if (key === "b" || key === "enter" || key === " ") {
+    if (
+        event.code === "KeyB" ||
+        event.code === "Enter" ||
+        event.code === "Space"
+    ) {
         jawabanBenar();
     }
 
     // SALAH
-    if (key === "s" || key === "backspace") {
+    if (
+        event.code === "KeyS" ||
+        event.code === "Backspace"
+    ) {
         jawabanSalah();
     }
 
