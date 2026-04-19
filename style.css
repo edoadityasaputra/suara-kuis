@@ -1,73 +1,113 @@
-body {
+/* RESET DASAR */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #2196f3, #0d47a1);
     color: white;
     text-align: center;
 }
 
+/* CONTAINER (TENGAH LAYAR) */
 .container {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* LOGO */
 .logo {
-    width: 120px;
+    width: 10vw;
+    max-width: 120px;
     margin-bottom: 10px;
 }
 
+/* JUDUL */
 h1 {
-    font-size: 50px;
-    margin: 10px 0;
+    font-size: 5vw;
     color: yellow;
     text-shadow: 2px 2px 5px black;
+    margin: 10px 0;
 }
 
 h2 {
-    font-size: 28px;
-    margin: 5px;
+    font-size: 2.5vw;
+    margin: 5px 0;
 }
 
 h3 {
-    font-size: 24px;
-    margin: 5px;
+    font-size: 2vw;
+    margin: 5px 0;
 }
 
 h4 {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 1.5vw;
     color: #ffd700;
+    margin-bottom: 20px;
 }
 
+/* TOMBOL */
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
+    gap: 3vw;
+    margin-top: 5vh;
 }
 
+/* STYLE TOMBOL */
 .btn {
-    font-size: 40px;
-    padding: 30px 60px;
+    font-size: 3vw;
+    padding: 3vh 5vw;
     border: none;
-    border-radius: 20px;
+    border-radius: 1.5vw;
     cursor: pointer;
     color: white;
     font-weight: bold;
-    box-shadow: 0 8px 0 rgba(0,0,0,0.3);
-    transition: 0.2s;
+    box-shadow: 0 0.8vh 0 rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
 }
 
+/* EFEK TEKAN */
 .btn:active {
-    transform: translateY(5px);
-    box-shadow: 0 3px 0 rgba(0,0,0,0.3);
+    transform: scale(0.95);
+    box-shadow: 0 0.3vh 0 rgba(0,0,0,0.3);
 }
 
-/* BENAR */
+/* WARNA */
 .benar {
     background-color: #4caf50;
 }
 
-/* SALAH */
 .salah {
     background-color: #f44336;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 600px) {
+
+    h1 { font-size: 8vw; }
+    h2 { font-size: 5vw; }
+    h3 { font-size: 4vw; }
+    h4 { font-size: 3.5vw; }
+
+    .btn {
+        font-size: 6vw;
+        padding: 4vh 6vw;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .logo {
+        width: 20vw;
+    }
 }
