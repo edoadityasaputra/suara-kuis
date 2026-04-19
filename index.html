@@ -2,16 +2,34 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Benar Salah</title>
+    <title>Lomba Cerdas Cermat</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Pilih Jawaban</h1>
+    <div class="container">
+        
+        <!-- LOGO -->
+        <img src="https://edoadityasaputra.github.io/barcode-scanner/MI-Khoirul-Huda_C3.png" class="logo">
 
-    <button onclick="jawabanBenar()">Benar</button>
-    <button onclick="jawabanSalah()">Salah</button>
+        <!-- JUDUL -->
+        <h1>Lomba Cerdas Cermat</h1>
+        <h2>Memperingati Hari Kartini 2026</h2>
+        <h3>MI Khoirul Huda Bedahan</h3>
+        <h4>TP. 2025/2026</h4>
+
+        <!-- AUDIO -->
+        <audio id="benarSound" src="benar.mp3"></audio>
+        <audio id="salahSound" src="salah.mp3"></audio>
+
+        <!-- TOMBOL -->
+        <div class="buttons">
+            <button class="btn benar" onclick="jawabanBenar()">✔ BENAR</button>
+            <button class="btn salah" onclick="jawabanSalah()">✖ SALAH</button>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
