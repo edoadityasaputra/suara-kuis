@@ -9,3 +9,20 @@ function jawabanSalah() {
     audio.currentTime = 0;
     audio.play();
 }
+
+// EVENT KEYBOARD
+document.addEventListener("keydown", function(event) {
+
+    const key = event.key.toLowerCase();
+
+    // BENAR
+    if (key === "b" || key === "enter" || key === " ") {
+        jawabanBenar();
+    }
+
+    // SALAH
+    if (key === "s" || key === "backspace") {
+        jawabanSalah();
+    }
+
+});
