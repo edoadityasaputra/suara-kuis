@@ -10,10 +10,16 @@ function jawabanSalah() {
     audio.play();
 }
 
-// EVENT KEYBOARD
-document.addEventListener("keydown", function(event) {
+// Fokus ke halaman
+window.onload = function() {
+    document.body.focus();
+};
 
-    // Cegah scroll kalau spasi ditekan
+// EVENT KEYBOARD
+window.addEventListener("keydown", function(event) {
+
+    console.log(event.code); // DEBUG
+
     if (event.code === "Space") {
         event.preventDefault();
     }
